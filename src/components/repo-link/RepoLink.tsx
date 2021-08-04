@@ -2,7 +2,7 @@ import React, {ReactElement} from "react";
 import styles from "./RepoLink.module.scss";
 import {RepoInfo} from "../../services/GithubInfoService";
 import {ReactComponent as BooksIcon} from "../../resources/BooksIcon.svg";
-import {ReactComponent as RepoLinkArrow} from "../../resources/RepoLinkArrow.svg";
+import {ReactComponent as RepoLinkArrow} from "../../resources/LinkArrow.svg";
 import i18n from "../../i18n/i18n";
 
 export default function RepoLink(props: {repoInfo: RepoInfo}): ReactElement {

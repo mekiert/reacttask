@@ -1,14 +1,7 @@
 @import "src/Styles.module";
 
 .wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $secondary-color;
-    padding: 14px 16px;
-    border-radius: 6px;
-    margin-bottom: 4px;
+    @include textListElementWithLink;
 
     .nameWrapper {
         display: flex;

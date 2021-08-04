@@ -13,3 +13,14 @@ $secondary-color: #f3f3f3;
 button:hover {
     cursor: pointer;
 }
+
+@mixin textListElementWithLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $secondary-color;
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+}

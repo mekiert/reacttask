@@ -1,0 +1,12 @@
+@import "src/Styles.module";
+
+.wrapper {
+    @include textListElementWithLink;
+
+    .linkButton {
+        padding: 0 10px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+    }
+}

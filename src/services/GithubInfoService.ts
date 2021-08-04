@@ -23,7 +23,7 @@ export type RepoInfo = {
 
 export default class GithubInfoService {
     static readonly MAX_BEST_REPOS = 4;
-    static readonly MAX_USERS_PRO_LIST = 10;
+    static readonly MAX_USERS_PRO_LIST = 6;
     static readonly API_BASE_URL = "https://api.github.com";
     static readonly reposDescendingComparator = (elem1: RepoInfo, elem2: RepoInfo): number =>
         elem2.stargazers_count - elem1.stargazers_count;

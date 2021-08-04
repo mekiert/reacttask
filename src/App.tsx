@@ -3,11 +3,12 @@ import GithubUserSearchBar from "./components/github-user-search-bar/GithubUserS
 import GithubInfoService, {UsersSearchResult} from "./services/GithubInfoService";
 import UserDetailsView from "./components/user-details-view/UserDetailsView";
 import UsersNotFound from "./components/users-not-found/UsersNotFound";
+import FoundUsersList from "./components/found-users-list/FoundUsersList";
 
 export default function App(): ReactElement {
     const [searchedUsername, changeSearchedUsername] = useState('');
-    const [usernameForDetails, changeUserForDetails] = useState<string | null>(null);
     const [usersSearchResult, updateUsersSearchResult] = useState<UsersSearchResult | null>(null);
+    const [usernameForDetails, changeUserForDetails] = useState<string | null>(null);
 
     const findUsers = (username: string) => {
         changeSearchedUsername(username);
@@ -19,15 +20,18 @@ export default function App(): ReactElement {
         }
     }
 
-    const renderFoundUsers = (): ReactElement => {
+    const showUserDetails = (username: string) => {
+        changeUserForDetails(username);
+    }
+
+    const renderFoundUsers = (): ReactElement | null => {
+        if(!searchedUsername) {
+            return null;
+        }
         if(usersSearchResult?.items?.length == 0) {
             return <UsersNotFound username={searchedUsername}/>
         }
-        return <React.Fragment>
-            {usersSearchResult?.items?.map(elem => {
-                return <div key={elem.login} onClick={() => changeUserForDetails(elem.login)}>{elem.login}</div>
-            })}
-        </React.Fragment>
+        return <FoundUsersList usersSearchResult={usersSearchResult} onRedirectToUserDetails={showUserDetails}/>
     }
 
     return (
