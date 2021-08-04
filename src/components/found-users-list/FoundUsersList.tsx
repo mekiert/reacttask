@@ -9,7 +9,7 @@ type Props = {
     onRedirectToUserDetails: (username: string) => void
 }
 
-const renderDescription = (login: string, name: string | null) => {
+const getUserDescription = (login: string, name: string | null) => {
     if(name) {
         return name + " - " + login;
     }
@@ -37,8 +37,8 @@ export default function FoundUsersList(props: Props): ReactElement {
     const renderListElement = (user: UserDetails) => {
         return (
             <div key={user.login} className={styles.wrapper}>
-                <div>{renderDescription(user.login, user.name)}</div>
-                <button className={styles.linkButton}
+                <div>{getUserDescription(user.login, user.name)}</div>
+                <button className={styles.linkButton} title={i18n.detailsOfUser + user.login}
                         onClick={redirectToUserDetailsFun(user.login)}><LinkArrow/></button>
             </div>
         );

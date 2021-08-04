@@ -8,5 +8,6 @@ export default {
   noAbout: "Nothing about...",
   loading: "Loading...",
   cannotFindUser: "We couldn't find anything like:",
-  linkToRepository: "Repository in GitHub: "
+  linkToRepository: "Repository in GitHub: ",
+  detailsOfUser: "Details of the user: "
 }

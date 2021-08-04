@@ -15,14 +15,14 @@ export default function GithubUserSearchBar(props: Props): ReactElement {
     }
 
     return (
-        <div className={styles.wrapper}>
+        <nav className={styles.wrapper}>
             <div className={styles.searchFieldWrapper}>
                 <SearchIcon className={styles.searchFieldIcon} role="presentation"/>
-                <input className={styles.searchField} placeholder={i18n.searchGithubUsers}
+                <input type="search" className={styles.searchField} placeholder={i18n.searchGithubUsers}
                        value={usernameToFind} onInput={onUsernameUpdate}/>
             </div>
             <button className={styles.searchButton}
                     onClick={() => props.onSearch(usernameToFind)}>{i18n.search}</button>
-        </div>
+        </nav>
     )
 }
