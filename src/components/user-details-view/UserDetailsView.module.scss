@@ -18,13 +18,17 @@
         }
     }
 
-    .detailsSection {
-        margin-bottom: 20px;
-
-        .sectionHeader {
-            margin-bottom: 4px;
-        }
+    .about {
+        color: #7D838B
     }
 
-}
+    .detailsSection {
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
 
+        .sectionHeader {
+            margin-bottom: 6px;
+        }
+    }
+}

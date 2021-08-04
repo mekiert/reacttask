@@ -10,12 +10,10 @@ export default function App(): ReactElement {
     const findUsers = (username: string) => {
         changeUserForDetails(null);
         updateUsersSearchResult(null);
-        GithubInfoService.findUsersByUsernameSearch(username)
-            .then(result => updateUsersSearchResult(result));
-    }
-
-    const moveToDetails = (username: string) => {
-        changeUserForDetails(username);
+        if(username) {
+            GithubInfoService.findUsersByUsernameSearch(username)
+                .then(result => updateUsersSearchResult(result));
+        }
     }
 
     return (
@@ -26,7 +24,7 @@ export default function App(): ReactElement {
             {!usernameForDetails &&
             <div>
                 {usersSearchResult?.items?.map(elem => {
-                    return <div key={elem.login} onClick={() => moveToDetails(elem.login)}>{elem.login}</div>
+                    return <div key={elem.login} onClick={() => changeUserForDetails(elem.login)}>{elem.login}</div>
                 })}
             </div>}
         </div>

@@ -35,7 +35,7 @@ export default function UserDetailsView(props: Props): ReactElement {
 
             <section className={styles.detailsSection}>
                 <b className={styles.sectionHeader}>{i18n.about}</b>
-                <div>{userDetails.bio ?? i18n.noAbout}</div>
+                <div className={styles.about}>{userDetails.bio ?? i18n.noAbout}</div>
             </section>
 
             <section className={styles.detailsSection}>

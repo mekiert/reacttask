@@ -1,5 +1,22 @@
+@import "src/Styles.module";
+
 .wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    background-color: $secondary-color;
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+
+    .nameWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .repoIcon {
+            margin-right: 8px;
+        }
+    }
 }
