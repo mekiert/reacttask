@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+    .imageAndNameWrapper {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+
+        .userImage {
+            border-radius: 50%;
+            width: 30vw;
+            min-width: 100px;
+            max-width: 320px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .detailsSection {
+        margin-bottom: 20px;
+
+        .sectionHeader {
+            margin-bottom: 4px;
+        }
+    }
+
+}
+
