@@ -7,5 +7,6 @@ export default {
   noName: "No name :(",
   noAbout: "Nothing about...",
   loading: "Loading...",
-  cannotFindUser: "We couldn't find anything like "
+  cannotFindUser: "We couldn't find anything like:",
+  linkToRepository: "Repository: "
 }

@@ -17,7 +17,7 @@ export default function GithubUserSearchBar(props: Props): ReactElement {
     return (
         <div className={styles.wrapper}>
             <div className={styles.searchFieldWrapper}>
-                <SearchIcon className={styles.searchFieldIcon}/>
+                <SearchIcon className={styles.searchFieldIcon} role="presentation"/>
                 <input className={styles.searchField} placeholder={i18n.searchGithubUsers}
                        value={usernameToFind} onInput={onUsernameUpdate}/>
             </div>
