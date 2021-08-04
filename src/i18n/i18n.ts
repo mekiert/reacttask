@@ -6,5 +6,6 @@ export default {
   topRepositories: "Top repositories",
   noName: "No name :(",
   noAbout: "Nothing about...",
-  loading: "Loading..."
+  loading: "Loading...",
+  cannotFindUser: "We couldn't find anything like "
 }
