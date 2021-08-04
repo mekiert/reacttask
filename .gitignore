@@ -1,0 +1,13 @@
+### Editors ###
+.idea/
+.vscode/
+.vs/
+*.iws
+*.iml
+*.ipr
+
+### External ###
+node_modules/
+
+### Build ###
+build/
