@@ -1,13 +1,10 @@
 $primary-color: #452cdc;
 $secondary-color: #f3f3f3;
 
-@font-face {
-    font-family: 'Roboto';
-    src: local('Roboto'), url(./fonts/Roboto-Regular.ttf) format('truetype');
-}
+@import url('https://fonts.cdnfonts.com/css/roboto');
 
 * {
-    font-family: 'Roboto', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 button:hover {
