@@ -1,3 +1,28 @@
-.search-field {
-    background-color: lightgray;
+@import "src/Styles.module";
+
+.wrapper {
+    padding: 48px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 1px 10px rgba(0, 0, 0, 0.05);
+
+    .searchField {
+        background-color: $secondary-color;
+        border: none;
+        border-radius: 10px;
+        //color: #7D838B; only for placeholder
+        flex-grow: 6;
+        margin-right: 15px;
+        padding: 10px 0;
+    }
+
+    .searchButton {
+        background-color: $primary-color;
+        border-radius: 8px;
+        color: white;
+        flex-grow: 1;
+        padding: 0 5px;
+        border: none;
+    }
 }
