@@ -20,7 +20,7 @@ export default function FoundUsersList(props: Props): ReactElement {
     const [usersDetails, setUserDetails] = useState<UserDetails[] | null>(null);
 
     useEffect(() => {
-        if(props.usersSearchResult) {
+        if(props.usersSearchResult && props.usersSearchResult.items) {
             const promises = props.usersSearchResult.items.map(item => {
                 return GithubInfoService.getUserDetails(item.login);
             })
